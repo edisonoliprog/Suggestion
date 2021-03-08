@@ -1,0 +1,202 @@
+{% trans_default_domain 'App' %}
+
+{% block body %}
+
+        <img class="img-fluid" src="{{ asset('build/images/logo_azul.png') }}">
+    <br>
+    <br>
+    <br>
+
+    <style>
+
+        * {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        fieldset {
+            border: 10px;
+        }
+
+        body {
+            font: 400 14px Roboto, sans-serif;
+            background: #f0f0f5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        input, select, textarea {
+            font: 400 18px Roboto, sans-serif;
+        }
+
+        .grupo:before, .grupo:after {
+            content: " ";
+            display: table;
+        }
+
+        .grupo:after {
+            clear: both;
+        }
+
+        .campo {
+            margin-bottom: 1em;
+        }
+
+        .campo label {
+            margin-bottom: 0.2em;
+            color: black;
+            display: block;
+
+        }
+
+        fieldset.grupo .campo {
+            float:  left;
+            margin-right: 1em;
+
+        }
+
+        .campo input[type="text"],
+        .campo input[type="email"],
+        .campo input[type="url"],
+        .campo input[type="tel"],
+        .campo select {
+
+            padding: 0.5em;
+            border: 1px solid #CCC;
+            box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+            display: block;
+        }
+
+        .campo select option {
+            padding-right: 1em;
+        }
+
+        .campo input:focus, .campo select:focus, .campo textarea:focus {
+            background:floralwhite;
+        }
+
+        .campo textarea {
+            padding: 0.5em;
+            border: 1px solid #CCC;
+            box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+            display: block;
+            width: 52%;
+            height: 30%;
+            color:black;
+        }
+       * {
+            margin: 0;
+            padding: 0;
+        }
+
+        fieldset {
+            border: 10px;
+        }
+
+        body, input, select, textarea{
+            font-family: sans-serif;
+            font-size: 1em;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        button {
+            cursor: pointer;
+            background: royalblue;
+            color: #fff;
+            width: 90px;
+            height: 30px;
+            border-radius: 5%;
+            box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+            text-shadow: none;
+        }
+
+
+    </style>
+
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" style="width: 25em" value="" />
+            </div>
+            <div class="campo">
+                <label for="snome">Sobrenome</label>
+                <input type="text" id="snome" name="snome" style="width: 25em" value="" />
+            </div>
+        </fieldset>
+
+        <div class="campo">
+            <label>Sexo</label>
+            <label class="checkbox">
+                <input type="checkbox" name="sexo" value="masculino"> Masculino
+                <input type="checkbox" name="sexo" value="feminino"> Feminino
+            </label>
+        </div>
+
+        <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="text" id="" name="email" style="width: 41em" value="" />
+        </div>
+
+        <div class="campo">
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" name="telefone" style="width: 20em"  value="" />
+        </div>
+
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" name="cidade" style="width: 20em" value="" />
+            </div>
+            <div class="campo">
+                <label for="estado">Estado</label>
+                <select name="estado" id="estado">
+                    <option value="">--</option>
+                    <option value="PR">PR</option>
+                    <option value="SP">SP</option>
+                    <option value="RJ">RJ</option>
+                    <option value="SC">SC</option>
+                    <option value="MG">MG</option>
+                    <option value="CE">CE</option>
+                    <option value="BA">BA</option>
+                    <option value="AC">AC</option>
+                    <option value="ES">ES</option>
+                    <option value="AM">AM</option>
+                    <option value="DF">DF</option>
+                    <option value="GO">GO</option>
+
+                </select>
+            </div>
+        </fieldset>
+
+        <label for="mensagem">Mensagem:</label>
+        <div class="campo">
+            <textarea> </textarea>
+        </div>
+
+    <div class="form">
+
+        <a aria-label href="https://www.nakata.com.br/assets/pdfs/POLITICA_PRIVACIDADE_EMPRESAS_RANDON.pdf">Acesse a Política de Privacidade Nakata</a>
+        <br>
+        <br>
+
+        <input type="checkbox"> Li e aceito a politica de privacidade</input>
+
+    </div>
+    <br>
+    <div>
+              <button class="botao submit" type="submit" name="submit">Enviar</button>
+
+        </div>
+    <br>
+    <div class="campo">
+        <label>
+            <link class="checkbox">
+
+            <a label href="https://landingpage.nakata.com.br/catalogo-nakata">Gostaria de receber a Newsletter Nakata</a></label>
+        </label>
+    </div>
+
+
+    </script>
+{% endblock %}
+
